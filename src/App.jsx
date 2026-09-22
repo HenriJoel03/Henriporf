@@ -8,9 +8,12 @@ import Footer from './components/Footer';
 import { LanguageProvider } from './LanguageContext';
 
 function App() {
-  const [theme, setTheme] = useState(
-    localStorage.getItem('theme') || 'dark'
-  );
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === 'undefined') {
+      return 'dark';
+    }
+    return localStorage.getItem('theme') || 'dark';
+  });
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -22,14 +25,14 @@ function App() {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'));
   };
 
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-slate-50 dark:bg-[#1e202a] text-slate-900 dark:text-white font-sans selection:bg-[#ff9d4a] selection:text-white transition-colors duration-300">
+      <div className="min-h-screen overflow-x-hidden bg-slate-50 dark:bg-[#1e202a] text-slate-900 dark:text-white font-sans selection:bg-[#F97316] selection:text-white transition-colors duration-300">
         <Navbar theme={theme} toggleTheme={toggleTheme} />
-        <main>
+        <main className="pt-20 sm:pt-24">
           <Hero />
           <About />
           <Experience />

@@ -56,31 +56,31 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 px-10 bg-slate-50 dark:bg-[#1e202a] transition-colors duration-300" id="projects">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-16 tracking-widest text-slate-900 dark:text-white uppercase transition-colors duration-300">{t('proj.title')}</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section className="bg-slate-50 px-4 py-16 transition-colors duration-300 dark:bg-[#1e202a] sm:px-6 lg:px-10 lg:py-20" id="projects">
+      <div className="mx-auto max-w-7xl">
+        <h2 className="mb-10 text-center text-2xl font-bold uppercase tracking-widest text-slate-900 transition-colors duration-300 dark:text-white sm:text-3xl lg:mb-16">{t('proj.title')}</h2>
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
-            <div key={project.id} className="bg-white dark:bg-[#2a2d3a] rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-gray-700 flex flex-col hover:-translate-y-2 transition-all duration-300">
-              <div className="h-48 overflow-hidden">
-                <img src={project.img} alt={project.title} className="w-full h-full object-cover" />
+            <div key={project.id} className="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_#F97316] dark:border-gray-700 dark:bg-[#2a2d3a]">
+              <div className="h-48 overflow-hidden sm:h-52">
+                <img src={project.img} alt={project.title} className="h-full w-full object-cover" />
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 transition-colors duration-300">{project.title}</h3>
-                <p className="text-slate-600 dark:text-gray-400 text-sm mb-4 flex-grow transition-colors duration-300">{project.desc}</p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map(tag => (
-                    <span key={tag} className="text-xs font-semibold px-2 py-1 bg-[#ff9d4a]/10 dark:bg-[#ff9d4a]/20 text-[#ff9d4a] rounded-md transition-colors duration-300">
+              <div className="flex flex-grow flex-col p-4 sm:p-5">
+                <h3 className="mb-3 text-xl font-bold text-slate-900 transition-colors duration-300 dark:text-white">{project.title}</h3>
+                <p className="mb-4 flex-grow text-sm text-slate-600 transition-colors duration-300 dark:text-gray-400">{project.desc}</p>
+                <div className="mb-5 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="rounded-md bg-[#ff9d4a]/10 px-2 py-1 text-[10px] font-semibold text-[#ff9d4a] transition-colors duration-300 dark:bg-[#ff9d4a]/20 sm:text-xs">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
-                  <button className="flex-1 bg-[#ff9d4a] hover:bg-[#e88a38] text-white py-2 rounded-lg text-sm font-semibold transition-colors">
+                <div className="flex gap-3">
+                  <button className="flex-1 rounded-lg bg-[#ff9d4a] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e88a38]">
                     {t('proj.demo')} <span className="ml-1">↗</span>
                   </button>
-                  <button className="bg-slate-100 hover:bg-slate-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-slate-900 dark:text-white p-2 rounded-lg transition-colors flex items-center justify-center w-10">
+                  <button className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-slate-900 transition-colors hover:bg-slate-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
                     <Code size={18} />
                   </button>
                 </div>
