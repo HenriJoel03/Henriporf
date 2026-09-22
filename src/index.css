@@ -5,19 +5,55 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-brand: #ff9d4a; /* Based on the orange color in the mockup */
-  --color-bg-dark: #222530; /* Rough approximation of background color */
+  --color-brand: #ff9d4a;
+  --color-bg-dark: #222530;
 }
 
-body {
-  font-family: var(--font-sans);
+:root {
+  color-scheme: light;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-/* Custom styles for the blob shape and gradient borders if needed */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section,
+header,
+footer {
+  width: 100%;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
 .blob-shape {
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
 }
