@@ -32,7 +32,7 @@ const Experience = () => {
   return (
     <section className="bg-slate-50 px-4 py-16 transition-colors duration-300 dark:bg-[#1e202a] sm:px-6 lg:px-10 lg:py-20" id="experience">
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-10 text-center text-2xl font-bold uppercase tracking-widest text-slate-900 transition-colors duration-300 dark:text-white sm:text-3xl lg:mb-16">{t('exp.title')}</h2>
+        <h2 className="mb-10 text-center text-2xl font-bold uppercase tracking-widest text-slate-900 transition-colors duration-300 dark:text-white sm:text-3xl lg:mb-16">{t('exp.title')} & PARCOURS</h2>
 
         <div className="flex flex-col justify-center gap-8 lg:flex-row lg:gap-16">
           <div className="w-full lg:w-1/3">
@@ -71,6 +71,8 @@ const Experience = () => {
                 <ul className="list-inside list-disc space-y-1 text-sm text-slate-600 transition-colors duration-300 dark:text-gray-300">
                   <li>{t('exp.meta.d1')}</li>
                   <li>{t('exp.meta.d2')}</li>
+                  <li> {t('exp.meta.d3')}</li>
+                  <li> {t('exp.meta.d4')}</li>
                 </ul>
               </div>
             </div>
@@ -81,10 +83,11 @@ const Experience = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-slate-900 transition-colors duration-300 dark:text-white sm:text-xl">{t('exp.amazon.title')}</h3>
-                <p className="mb-3 text-sm text-slate-500 transition-colors duration-300 dark:text-gray-500">{t('exp.amazon.date')}</p>
+
+                <p className="mb-3 text-sm text-slate-500 transition-colors duration-300 dark:text-gray-500"></p>
+                
                 <ul className="list-inside list-disc space-y-1 text-sm text-slate-600 transition-colors duration-300 dark:text-gray-300">
                   <li>{t('exp.amazon.d1')}</li>
-                  <li>{t('exp.amazon.d2')}</li>
                 </ul>
               </div>
             </div>
