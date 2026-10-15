@@ -9,8 +9,8 @@ import nodeImg from '../assets/techno/node-js.png';
 import prismaImg from '../assets/techno/prisma.webp';
 
 import googleImg from '../assets/companies/google.png';
-import metaImg from '../assets/companies/meta.webp';
-import amazonImg from '../assets/companies/amazon.png';
+import metaImg from '../assets/companies/meta.png';
+import amazonImg from '../assets/companies/amazon.jfif';
 
 import { useTranslation } from '../LanguageContext';
 
