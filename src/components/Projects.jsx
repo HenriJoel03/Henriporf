@@ -21,9 +21,9 @@ const Projects = () => {
     {
       id: 2,
       title: t('proj.p2.title'),
-      desc: t('proj.p2.desc'),
+      desc: t('proj.p2.desc') + (' Dev Estyy'),
       img: proj2,
-      tags: ['Next.js', 'TypeScript', 'Prisma'],
+      tags: ['PHP', 'JavaScript', 'HTML' , 'CSS' , 'Collab Github & Trello'],
     },
     {
       id: 3,
