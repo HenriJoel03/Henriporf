@@ -13,7 +13,7 @@ const Navbar = ({ theme, toggleTheme }) => {
   ];
 
   return (
-    <header className="fixed top-0 z-[60] w-full border-b border-slate-200/80 bg-slate-900/95 backdrop-blur-xl shadow-[0_0_0_rgba(0,0,0,0)] transition-all duration-300 hover:shadow-[0_0_35px_rgba(249,115,22,0.45)]">
+    <header data-reveal className="fixed top-0 z-[60] w-full border-b border-slate-200/80 bg-slate-900/95 backdrop-blur-xl shadow-[0_0_0_rgba(0,0,0,0)] transition-all duration-300 hover:shadow-[0_0_35px_rgba(249,115,22,0.45)]">
       <nav className="navbar mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-10">
         <div className="flex-1 min-w-0">
           <a href="#home" className="flex min-w-0 items-center gap-2 text-lg font-bold text-[#F97316] transition-all duration-300 hover:text-[#ffb067] sm:text-xl">

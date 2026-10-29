@@ -40,13 +40,13 @@ const Experience = () => {
   return (
     <section className="bg-slate-50 px-4 py-16 transition-colors duration-300 dark:bg-[#1e202a] sm:px-6 lg:px-10 lg:py-20" id="experience">
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-10 text-center text-2xl font-bold uppercase tracking-widest text-slate-900 transition-colors duration-300 dark:text-white sm:text-3xl lg:mb-16">{t('exp.title')} & {t('exp.subtitle')}</h2>
+        <h2 data-reveal className="mb-10 text-center text-2xl font-bold uppercase tracking-widest text-slate-900 transition-colors duration-300 dark:text-white sm:text-3xl lg:mb-16">{t('exp.title')} & {t('exp.subtitle')}</h2>
 
         <div className="flex flex-col justify-center gap-8 lg:flex-row lg:gap-16">
           <div className="w-full lg:w-1/3">
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
-              {technos.map(({ name, Icon, color }) => (
-                <div key={name} translate="no" className="notranslate flex aspect-square flex-col items-center justify-center rounded-full border border-slate-200 bg-white p-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_#F97316] dark:border-gray-700 dark:bg-[#2a2d3a]">
+              {technos.map(({ name, Icon, color }, index) => (
+                <div key={name} data-reveal translate="no" style={{ '--reveal-delay': `${index * 35}ms` }} className="notranslate flex aspect-square flex-col items-center justify-center rounded-full border border-slate-200 bg-white p-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_#F97316] dark:border-gray-700 dark:bg-[#2a2d3a]">
                   <span className={`mb-2 flex h-10 w-10 items-center justify-center sm:h-12 sm:w-12 ${name === 'Next JS' ? 'rounded-full bg-white p-1' : ''} ${name === 'Prisma' ? 'rounded-md bg-white p-1' : ''}`}>
                     <Icon aria-hidden="true" className="h-full w-full" style={{ color }} />
                   </span>
@@ -57,7 +57,7 @@ const Experience = () => {
           </div>
 
           <div className="flex w-full flex-col gap-5 lg:w-1/2">
-            <div className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-lg transition-colors duration-300 dark:border-gray-700 dark:bg-[#2a2d3a] sm:p-6">
+            <div data-reveal className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-lg transition-colors duration-300 dark:border-gray-700 dark:bg-[#2a2d3a] sm:p-6">
               <div className="mt-1 flex-shrink-0">
                 <img src={googleImg} alt="Google" className="h-8 w-8 object-contain" />
               </div>
@@ -71,7 +71,7 @@ const Experience = () => {
               </div>
             </div>
 
-            <div className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-lg transition-colors duration-300 dark:border-gray-700 dark:bg-[#2a2d3a] sm:p-6">
+            <div data-reveal style={{ '--reveal-delay': '90ms' }} className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-lg transition-colors duration-300 dark:border-gray-700 dark:bg-[#2a2d3a] sm:p-6">
               <div className="mt-1 flex-shrink-0">
                 <img src={metaImg} alt="Meta" className="h-8 w-8 object-contain" />
               </div>
@@ -87,7 +87,7 @@ const Experience = () => {
               </div>
             </div>
 
-            <div className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-lg transition-colors duration-300 dark:border-gray-700 dark:bg-[#2a2d3a] sm:p-6">
+            <div data-reveal style={{ '--reveal-delay': '180ms' }} className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-lg transition-colors duration-300 dark:border-gray-700 dark:bg-[#2a2d3a] sm:p-6">
               <div className="mt-1 flex-shrink-0">
                 <img src={amazonImg} alt="Amazon" className="h-8 w-8 object-contain" />
               </div>
