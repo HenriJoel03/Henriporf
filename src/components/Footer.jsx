@@ -22,7 +22,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="hover:shadow-[0_0_50px_#F97316] bg-slate-900 dark:bg-slate-900 py-10 text-center border-t border-slate-200 dark:border-gray-800 transition-colors duration-300">
+    <footer data-reveal className="hover:shadow-[0_0_50px_#F97316] bg-slate-900 dark:bg-slate-900 py-10 text-center border-t border-slate-200 dark:border-gray-800 transition-colors duration-300">
       <div className="flex flex-col items-center justify-center">
         <div className="flex items-center gap-2 mb-4 text-slate-900 dark:text-white font-bold text-xl transition-colors duration-300">
           <Diamond className="text-slate-900 dark:text-[#F97316] transition-colors duration-300" size={28} />

@@ -58,11 +58,11 @@ const Projects = () => {
   return (
     <section className="bg-slate-50 px-4 py-16 transition-colors duration-300 dark:bg-[#1e202a] sm:px-6 lg:px-10 lg:py-20" id="projects">
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-10 text-center text-2xl font-bold uppercase tracking-widest text-slate-900 transition-colors duration-300 dark:text-white sm:text-3xl lg:mb-16">{t('proj.title')}</h2>
+        <h2 data-reveal className="mb-10 text-center text-2xl font-bold uppercase tracking-widest text-slate-900 transition-colors duration-300 dark:text-white sm:text-3xl lg:mb-16">{t('proj.title')}</h2>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
-            <div key={project.id} className="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_#F97316] dark:border-gray-700 dark:bg-[#2a2d3a]">
+            <div key={project.id} data-reveal style={{ '--reveal-delay': `${((project.id - 1) % 3) * 70}ms` }} className="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_#F97316] dark:border-gray-700 dark:bg-[#2a2d3a]">
               <div className="h-48 overflow-hidden sm:h-52">
                 <img src={project.img} alt={project.title} className="h-full w-full object-cover" />
               </div>
