@@ -3,7 +3,7 @@ import proj1 from '../assets/projects/1.png';
 import proj2 from '../assets/projects/2.png';
 import proj3 from '../assets/projects/3.png';
 import proj4 from '../assets/projects/4.png';
-import proj5 from '../assets/projects/5.png';
+import proj5 from '../assets/projects/5.jfif';
 import proj6 from '../assets/projects/6.png';
 import { useTranslation } from '../LanguageContext';
 
@@ -71,7 +71,7 @@ const Projects = () => {
                 <p className="mb-4 flex-grow text-sm text-slate-600 transition-colors duration-300 dark:text-gray-400">{project.desc}</p>
                 <div className="mb-5 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="rounded-md bg-[#ff9d4a]/10 px-2 py-1 text-[10px] font-semibold text-[#ff9d4a] transition-colors duration-300 dark:bg-[#ff9d4a]/20 sm:text-xs">
+                    <span key={tag} translate="no" className="notranslate rounded-md bg-[#ff9d4a]/10 px-2 py-1 text-[10px] font-semibold text-[#ff9d4a] transition-colors duration-300 dark:bg-[#ff9d4a]/20 sm:text-xs">
                       {tag}
                     </span>
                   ))}

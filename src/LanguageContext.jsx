@@ -10,6 +10,7 @@ export const LanguageProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem('language', language);
+    document.documentElement.lang = language === 'zh-pinyin' ? 'zh-Latn' : language;
   }, [language]);
 
   const t = (key) => {
