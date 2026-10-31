@@ -1,4 +1,4 @@
-import { Hexagon, Sun, Moon, Globe, Diamond } from 'lucide-react';
+import { Menu, Sun, Moon, Globe, Diamond } from 'lucide-react';
 import { useTranslation } from '../LanguageContext';
 
 const Navbar = ({ theme, toggleTheme }) => {
@@ -87,7 +87,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-square text-slate-300 transition-all duration-300 hover:text-[#F97316] hover:bg-transparent hover:drop-shadow-[0_0_10px_rgba(249,115,22,0.9)]">
-              <Hexagon size={18} />
+              <Menu size={18} />
             </label>
             <ul tabIndex={0} className="menu menu-sm dropdown-content z-[1] mt-3 w-44 rounded-box border border-slate-200 bg-white p-2 shadow dark:border-gray-700 dark:bg-[#2a2d3a]">
               <li><a href="#home" onClick={() => document.activeElement?.blur?.()}>{t('nav.home')}</a></li>
