@@ -41,7 +41,7 @@ const Footer = () => {
                 rel={href.startsWith('http') ? 'noreferrer' : undefined}
                 aria-label={label}
                 title={label}
-                className="text-slate-400 transition-colors hover:text-orange-500 dark:text-gray-400 dark:hover:text-white"
+                className="text-slate-400 transition-colors hover:text-[#F97316] dark:text-gray-400 dark:hover:text-[#F97316]"
               >
                 <Icon size={20} aria-hidden="true" />
               </a>
